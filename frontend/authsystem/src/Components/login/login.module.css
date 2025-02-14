@@ -1,0 +1,138 @@
+/* Container styling with a fade-in effect */
+.container {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+  }
+  
+  /* Title styling with a slide-down animation */
+  .title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    animation: slideDown 0.5s ease;
+  }
+  
+  /* Form layout */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Grouping input and error message */
+  .inputGroup {
+    position: relative;
+  }
+  
+  /* Input field styling with transition effects */
+  .input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  /* Input error state */
+  .errorInput {
+    border-color: red;
+  }
+  
+  /* Error message styling with fade-in effect */
+  .errorMessage {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  /* Global error message styling */
+  .globalError {
+    color: white;
+    background-color: red;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  /* Button styling with hover effect */
+  .button {
+    padding: 0.8rem;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Spinner for the login button */
+  .buttonSpinner {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-left-color: #ffffff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Slide-down animation for the title */
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Spinner rotation animation */
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Responsive adjustments for mobile devices */
+  @media (max-width: 480px) {
+    .container {
+      margin: 1rem;
+      padding: 1.5rem;
+    }
+    .title {
+      font-size: 1.5rem;
+    }
+  }
+  

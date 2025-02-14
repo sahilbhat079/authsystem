@@ -7,3 +7,4 @@ const ERROR_TYPES = {
 };
 
 module.exports = ERROR_TYPES;
+9
